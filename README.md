@@ -1,4 +1,4 @@
-git st# Ising Model Network Dynamics Simulation Framework
+# Ising Model Network Dynamics Simulation Framework
 
 A comprehensive Python framework for simulating Ising-like network dynamics with variational free energy calculations, learning capabilities, and extensive visualization tools.
 
@@ -7,9 +7,6 @@ A comprehensive Python framework for simulating Ising-like network dynamics with
 ### Installation
 
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd ising-model
 
 # Install dependencies
 pip install -r requirements.txt
