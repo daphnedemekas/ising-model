@@ -196,28 +196,6 @@ Small-world network with tunable rewiring probability:
 
 ![Watts-Strogatz](plots/network_analysis/ws.png)
 
-#### Network Regime Analysis
-
-**ER Sparse Network Regimes**
-Dynamical regimes for sparse Erdős-Rényi network across different observation likelihood values:
-
-![ER sparse regimes](plots/network_analysis/ER_sparse_regimes.png)
-
-**ER Dense Network Regimes**
-Dynamical regimes for dense Erdős-Rényi network showing complexity evolution:
-
-![ER dense regimes](plots/network_analysis/ER_dense_regimes.png)
-
-**Circular Ladder Network Regimes**
-Dynamical regimes for circular ladder network showing accuracy patterns:
-
-![Circular ladder regimes](plots/network_analysis/circular_ladder_regimes.png)
-
-**Watts-Strogatz Network Regimes**
-Dynamical regimes for Watts-Strogatz small-world network:
-
-![Watts-Strogatz regimes](plots/network_analysis/ws_regimes.png)
-
 ## 🔍 Key Insights
 
 ### Behavioral Regimes
@@ -277,17 +255,6 @@ ising-demo
 ising-sweep --network_size 100
 ising-exponential
 ```
-
-## 📈 Applications
-
-This analysis framework is useful for:
-
-- **Neuroscience**: Modeling neural network dynamics and criticality
-- **Social systems**: Understanding opinion dynamics and consensus formation
-- **Complex networks**: Studying phase transitions in networked systems
-- **Active inference**: Analyzing belief propagation and collective decision-making
-- **Machine learning**: Understanding learning dynamics in neural networks
-- **Physics**: Studying phase transitions and critical phenomena
 
 ## 🔧 Configuration
 
