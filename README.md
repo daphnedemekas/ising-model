@@ -2,12 +2,11 @@
 
 A comprehensive Python framework for simulating Ising-like network dynamics with variational free energy calculations, learning capabilities, and extensive visualization tools.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
 ```bash
-
 # Install dependencies
 pip install -r requirements.txt
 
@@ -36,7 +35,7 @@ phi_hist, spin_hist, kld_hist, accur_hist = simulator.run_simulation(
 )
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ising-model/
@@ -48,10 +47,6 @@ ising-model/
 │   ├── simulation/
 │   │   ├── simulation.py       # Core simulation classes
 │   │   └── config.py          # Configuration and utilities
-│   ├── network/
-│   │   ├── main.py            # Network demo script
-│   │   ├── networks.py        # Network generation functions
-│   │   └── network_config.py  # Network configuration
 │   ├── exponential_term/
 │   │   └── main.py            # Exponential term analysis
 │   └── utils/
@@ -63,7 +58,7 @@ ising-model/
 └── run_demos.py              # Comprehensive demo runner
 ```
 
-## 🔬 Mathematical Background
+## About
 
 The simulation implements Ising-like dynamics with variational free energy calculations:
 
@@ -81,7 +76,7 @@ The system evolves according to variational update rules:
 2. **Energy Difference**: ΔE = W·s + θ
 3. **Variational Free Energy**: F = Complexity - Accuracy
 
-## 📊 Visualizations and Results
+## Visualizations and Results
 
 ### Main Ising Model Demo
 
@@ -165,38 +160,7 @@ Filled contour heatmap over the (k, ω) grid with contour overlays. Useful for s
 
 ![3D surface](plots/exponential_analysis/3d_surface.png)
 
-### Network Structure Analysis
-
-Comparison of different network topologies and their structural properties:
-
-#### Network Comparison Overview
-Overview of different network topologies showing their structural characteristics:
-
-![Network comparison](plots/network_analysis/network_comparison.png)
-
-#### Individual Network Visualizations
-
-**Erdős-Rényi Sparse Network**
-Random graph with low connection probability, showing sparse connectivity:
-
-![ER sparse](plots/network_analysis/ER_sparse.png)
-
-**Erdős-Rényi Dense Network**
-Random graph with high connection probability, showing dense connectivity:
-
-![ER dense](plots/network_analysis/ER_dense.png)
-
-**Circular Ladder Network**
-Regular graph with high clustering and modular structure:
-
-![Circular ladder](plots/network_analysis/circular_ladder.png)
-
-**Watts-Strogatz Network**
-Small-world network with tunable rewiring probability:
-
-![Watts-Strogatz](plots/network_analysis/ws.png)
-
-## 🔍 Key Insights
+## Key Insights
 
 ### Behavioral Regimes
 - **Low po values** (~0.5): Random, disordered dynamics with weak correlations
@@ -219,7 +183,7 @@ Small-world network with tunable rewiring probability:
 - **Symmetry**: Function exhibits symmetrical properties around ω = 0.5
 - **Control parameter**: k acts as a "tuning dial" for system sensitivity
 
-## 🛠️ Available Scripts
+## Available Scripts
 
 ### Main Demo Runner
 ```bash
@@ -234,9 +198,6 @@ python src/main.py
 
 # Vectorized implementation
 python src/vectorized.py
-
-# Network analysis
-python src/network/main.py
 
 # Exponential term analysis
 python src/exponential_term/main.py
@@ -256,7 +217,7 @@ ising-sweep --network_size 100
 ising-exponential
 ```
 
-## 🔧 Configuration
+## Configuration
 
 The framework supports various configuration options:
 
@@ -275,7 +236,7 @@ The framework supports various configuration options:
 - **Time steps**: Simulation duration
 - **Learning rate**: For adaptive dynamics
 
-## 📚 Dependencies
+## Dependencies
 
 - **numpy**: Numerical computations
 - **matplotlib**: Visualization
@@ -284,7 +245,7 @@ The framework supports various configuration options:
 - **seaborn**: Statistical visualization
 - **tqdm**: Progress bars
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -292,17 +253,17 @@ The framework supports various configuration options:
 4. Add tests if applicable
 5. Submit a pull request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 📖 References
+## References
 
 - Ising, E. (1925). Beitrag zur Theorie des Ferromagnetismus
 - Friston, K. (2010). The free-energy principle: a unified brain theory?
 - Mezard, M., & Montanari, A. (2009). Information, physics, and computation
 
-## 📞 Contact
+## Contact
 
 For questions or contributions, please open an issue on GitHub.
 

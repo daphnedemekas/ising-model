@@ -22,8 +22,7 @@ def setup_output_directories():
         "plots/ising_demo",
         "plots/vectorized_demo", 
         "plots/exponential_analysis",
-        "plots/parameter_sweep",
-        "plots/network_analysis"
+        "plots/parameter_sweep"
     ]
     
     for dir_path in dirs:
@@ -217,56 +216,7 @@ def run_parameter_sweep():
         print(f"❌ Error in parameter sweep: {e}")
         return {}
 
-def run_network_analysis():
-    """Run network structure analysis."""
-    print("\n🌐 Running Network Structure Analysis...")
-    
-    try:
-        import networkx as nx
-        from simulation.config import create_network, get_default_parameters
-        
-        network_types = ['erdos_renyi', 'watts_strogatz', 'ring_of_cliques', 'grid_2d']
-        
-        fig, axes = plt.subplots(2, 2, figsize=(15, 12))
-        axes = axes.flatten()
-        
-        for i, network_type in enumerate(network_types):
-            try:
-                # Create network
-                params = get_default_parameters(network_type, n_nodes=100)
-                G = create_network(network_type, **params)
-                
-                # Calculate network metrics
-                n_nodes = G.number_of_nodes()
-                n_edges = G.number_of_edges()
-                avg_degree = 2 * n_edges / n_nodes
-                clustering = nx.average_clustering(G)
-                diameter = nx.diameter(G) if nx.is_connected(G) else float('inf')
-                
-                # Plot network
-                pos = nx.spring_layout(G, k=1, iterations=50)
-                nx.draw(G, pos, ax=axes[i], node_size=20, alpha=0.7, 
-                       with_labels=False, edge_color='gray', width=0.5)
-                
-                axes[i].set_title(f"{network_type.replace('_', ' ').title()}\n"
-                                f"Nodes: {n_nodes}, Edges: {n_edges}\n"
-                                f"Avg Degree: {avg_degree:.2f}, Clustering: {clustering:.3f}")
-                axes[i].axis('off')
-                
-            except Exception as e:
-                axes[i].text(0.5, 0.5, f"Error: {e}", ha='center', va='center')
-                axes[i].set_title(f"{network_type} (Failed)")
-        
-        plt.tight_layout()
-        plt.savefig("plots/network_analysis/network_comparison.png", dpi=300, bbox_inches="tight")
-        plt.close()
-        
-        print("✅ Network analysis completed successfully!")
-        return {'network_types': network_types}
-        
-    except Exception as e:
-        print(f"❌ Error in network analysis: {e}")
-        return {}
+
 
 def create_summary_report(results):
     """Create a summary report of all results."""
@@ -315,18 +265,14 @@ def create_summary_report(results):
         report.append("- Complexity and accuracy decomposition")
         report.append("")
     
-    if 'network_analysis' in results:
-        report.append("## Network Structure Analysis")
-        report.append("- Multiple network topology comparisons")
-        report.append("- Network metrics calculation")
-        report.append("")
+
     
     report.append("## Output Directories")
     report.append("- `plots/ising_demo/` - Main simulation visualizations")
     report.append("- `plots/vectorized_demo/` - Vectorized simulation results")
     report.append("- `plots/exponential_analysis/` - Exponential term analysis")
     report.append("- `plots/parameter_sweep/` - Parameter sweep results")
-    report.append("- `plots/network_analysis/` - Network structure analysis")
+
     
     # Write report
     with open("plots/summary_report.md", "w") as f:
@@ -357,8 +303,7 @@ def main():
     # Parameter sweep
     results['parameter_sweep'] = run_parameter_sweep()
     
-    # Network analysis
-    results['network_analysis'] = run_network_analysis()
+
     
     # Create summary report
     create_summary_report(results)
