@@ -156,32 +156,9 @@ Filled contour heatmap over the (k, ω) grid with contour overlays. Useful for s
 ![Parameter heatmap](plots/exponential_analysis/parameter_heatmap.png)
 
 #### 3D Surface
-3D surface of the exponential term over the (k, ω) parameter space. Complements the heatmap with geometric intuition of gradients and curvature. The height represents function values, making it easy to visualize peaks, valleys, and the overall "landscape" of the function.
+3D surface of the exponential term over the (k, ω) parameter space. C
 
 ![3D surface](plots/exponential_analysis/3d_surface.png)
-
-## Key Insights
-
-### Behavioral Regimes
-- **Low po values** (~0.5): Random, disordered dynamics with weak correlations
-- **Medium po values** (~0.6): Transitional regime with emerging structure
-- **High po values** (~0.75): Ordered, synchronized behavior with strong correlations
-
-### Critical Phenomena
-- **Avalanche distributions**: Power-law scaling suggests the system operates near criticality
-- **Phase transitions**: Distinct changes in correlation structure and synchronization as po varies
-- **Energy landscapes**: Multiple attractors and metastable states emerge in different regimes
-
-### Network Effects
-- **Topology matters**: Network structure influences correlation patterns and synchronization
-- **Local vs global**: Individual node dynamics couple to produce collective behaviors
-- **Emergent properties**: System-level patterns not present in isolated nodes
-
-### Exponential Term Properties
-- **Low k regime**: Function behaves linearly (f ≈ 2ω)
-- **High k regime**: Sharp, nonlinear transitions emerge
-- **Symmetry**: Function exhibits symmetrical properties around ω = 0.5
-- **Control parameter**: k acts as a "tuning dial" for system sensitivity
 
 ## Available Scripts
 
